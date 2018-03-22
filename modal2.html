@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用模态组件定制的对话框-2</title>
+    <link rel="stylesheet" href="modal1.css">
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app1">
+    <al-modal @on-ok="okEvent" @on-cancel="cancelEvent"  first-Btn-Name="点我表示确定" second-Btn-Name="点我表示取消"></al-modal>
+</div>
+<script src="modal1.js"></script>
+<script>
+
+    let vm = new Vue({
+        el:'#app1',
+        methods:{
+            okEvent(){
+                alert('确定了！！')
+            },
+            cancelEvent(){
+                alert('取消了！！')
+            }
+        }
+    })
+</script>
+</body>
+</html>

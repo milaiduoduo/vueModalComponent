@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用模态组件定制的对话框-1</title>
+    <link rel="stylesheet" href="modal1.css">
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app1">
+        <al-modal modal-title="我的定制1">
+            <ul slot="modal-content">
+                <li v-for="item in items">
+                    {{item}}
+                </li>
+            </ul>
+            <div slot="modal-footer">
+                <span>我不想要按钮了！！</span>
+            </div>
+        </al-modal>
+    </div>
+</body>
+<script src="modal1.js"></script>
+<script>
+
+    let vm = new Vue({
+        el:'#app1',
+        data:{
+            items:[...'我的宝贝']
+        }
+    })
+</script>
+</html>
